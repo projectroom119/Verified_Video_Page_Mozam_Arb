@@ -1,146 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '890336515863864');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=890336515863864&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "890336515863864");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=890336515863864&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de vídeo</title>
-    <link rel="stylesheet" href="styles.css" />
-
+    <title>Links de vídeo</title>
     <style>
-      * {
+      body {
+        background-color: #121212;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
         margin: 0;
-        padding: 0;
+      }
+      .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
         box-sizing: border-box;
       }
-
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+      .header .logo {
+        font-size: 1.5em;
       }
-
-      .container {
-        width: 90%;
-        max-width: 400px;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        text-align: center;
-      }
-
-      .nav a {
-        font-size: 14px;
-        color: #000;
-        text-decoration: none;
-        margin-bottom: 15px;
-        display: inline-block;
-      }
-
-      .video-container {
-        margin: 20px 0;
-      }
-
-      .video-container video {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        border-radius: 8px;
-      }
-
-      .buttons a {
-        display: block;
-        text-decoration: none;
-        color: white;
-        padding: 15px;
-        margin-bottom: 15px;
+      .header .subscribe {
+        background-color: #ff5722;
+        border: none;
+        padding: 10px 20px;
         border-radius: 5px;
-        font-size: 16px;
-        transition: all 0.3s ease;
+        cursor: pointer;
       }
-
-      .watch-btn {
-        background-color: #00d395;
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
       }
-
-      .download-btn {
-        background-color: #ff7f50;
+      .button {
+        background-color: #1e1e1e;
+        border: 1px solid #333;
+        border-radius: 10px;
+        padding: 15px 30px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 300px;
+        text-align: left;
+        transition: transform 0.3s ease;
       }
-
-      .fb-btn {
-        background-color: #3b5998;
+      .button img {
+        width: 50px;
+        height: 50px;
+        margin-right: 20px;
+        border-radius: 5px;
       }
-
-      .buttons a:hover {
-        opacity: 0.9;
+      .button span {
+        font-weight: bold;
       }
-
-      /* Mobile responsiveness */
+      .button:hover {
+        transform: scale(1.05);
+      }
+      .footer {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
       @media (max-width: 600px) {
-        body {
-          padding: 10px;
-          height: auto;
+        .header,
+        .footer {
+          flex-direction: column;
+          align-items: center;
         }
-
-        .container {
+        .button {
           width: 100%;
-          padding: 15px;
+          padding: 10px;
         }
-
-        .buttons a {
-          padding: 12px;
-          font-size: 14px;
+        .button img {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
         }
-
-        .video-container video {
-          max-height: 200px;
+        .button:hover {
+          transform: scale(1.1);
         }
       }
     </style>
+    <script>
+      function openLink() {
+        window.location.href = "https://t.co/LIZpdnXZFW";
+      }
+    </script>
   </head>
   <body>
-    <div class="container">
-      <div class="nav">
-        <a href="https://t.co/LIZpdnXZFW">Página de vídeo</a>
+    <div class="header">
+      <div class="logo">VÍDEO DE SENHORAS LINDAS</div>
+      <a href="https://t.co/LIZpdnXZFW"
+        ><button class="subscribe">Inscrever-se</button></a
+      >
+    </div>
+    <div class="button-container">
+      <div class="button" onclick="openLink()">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgroV26ZH0KsrhbJKg9A9_Qg7csmkEAC0HTVPTEwSKb0jjTVVMMG2YKvTg1vcJfx3FYERLIaS6VSkG4CB_VJFQti65EhyphenhyphentDxs-3gjqGfkMwt5J8x1K7d7J3gdmo_zEqhrpPdqrFPSlr4qvN-P1yjEfyzg1fsZ1u4XGokdMd-nQ_XJ0T2Lkv-3jQlGeeIz4_/s1080/Form%20is%20absolutbjsndkely%20free%20(1).jpg"
+          alt="Thumbnail 1"
+        />
+        <span>ASSISTA O VÍDEO MAIS QUENTE</span>
       </div>
-      <div class="video-container">
-        <a href="https://t.co/LIZpdnXZFW" target="_blank">
-          <video controls width="100%">
-            <source src="your-video.mp4" type="video/mp4" />
-            Seu navegador não suporta a tag de vídeo.
-          </video>
-        </a>
+      <div class="button" onclick="openLink()">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5hfzNFmDHMi4LOSFp8MzAnQSCjJ-l3OTYZP7bExXAmRAjRQbJxw-oyIiqdk0GmOMbR-Ufp8c0ycTjFmLc1zAWu0idj_NJZ4Pls2NgpI-z89Ye6vGL9umqY4ful0lopsr1hl1I6kH482_-5pJPUV9m6Iz9hhc9rrbbQ_8jotNd9tEZcoVtgcPRpoxkSiq5/s1080/Form%20is%20absolutely%20free%20(1).jpg"
+          alt="Thumbnail 2"
+        />
+        <span>ASSISTA NOSSO ÚLTIMO VÍDEO</span>
       </div>
-      <div class="buttons">
-        <a href="https://t.co/LIZpdnXZFW" class="watch-btn"
-          >Assista ao vídeo completo</a
-        >
-        <a href="https://t.co/LIZpdnXZFW" class="download-btn"
-          >Baixar vídeo (25,26 MB)</a
-        >
-        <a href="https://t.co/LIZpdnXZFW" class="fb-btn">Voltar ao Facebook</a>
+      <div class="button" onclick="openLink()">
+        <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjce9l4l5u26b3BA_Wq0xrKcz6sEF_OmKSx-WK9TDcBOpheG3DHFrtQZ3mqQC-jkJMCuoq2P6WKbaqhC-xLqZ-oKkl-oCYByhJqk-_CqlgkDyt5Ddwfe-vXtnCcqjWCx8g69PfFOfsJc_w23DAUel81qGBzmhpqdXeeKw5mmFBc9fML97T0veuN0rFmWeQD/s320/Form%20is%20absolutely%20free%20(2).jpg"
+          alt="Thumbnail 3"
+        />
+        <span>ASSISTA AO VÍDEO MAIS TENDENTE</span>
       </div>
+    </div>
+    <div class="footer">
+      <div>vídeo de lindas mulheres...</div>
+      <div>assistir de graça!</div>
     </div>
 
     <script>
